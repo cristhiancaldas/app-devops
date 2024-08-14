@@ -5,7 +5,7 @@ pipeline {
         IMAGE='demo_devops'
         REGISTRY='crist'
         VERSION='v2'
-        SERVER='ec2-user@54.159.156.35'
+        SERVER='ec2-user@3.90.154.11'
     }
     stages {
         stage('install dependencies') {
@@ -69,13 +69,13 @@ pipeline {
                '''
             }
         }  
-      /*  stage('deploy to aws') {
+        stage('deploy to aws') {
             steps {
                 sshagent (['ssh-aws']) {
                     sh 'scp -o StrictHostKeyChecking=no docker-compose.yaml $SERVER:/home/ec2-user'
                     sh 'ssh $SERVER docker-compose up -d'
                 }
             }
-        }  */              
+        }             
     }
 }
