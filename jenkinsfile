@@ -47,7 +47,7 @@ pipeline {
         }         
         stage('build') {
             steps {
-               sh 'docker build -t $IMAGE:$VERSION .'
+               sh 'docker build --platform linux/amd64 -t $IMAGE:$VERSION .'
             }
         }
         stage('deploy to hub') {
