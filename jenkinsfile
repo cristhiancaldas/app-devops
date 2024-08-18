@@ -5,7 +5,7 @@ pipeline {
         IMAGE='demo_devops'
         REGISTRY='crist'
         VERSION='v2'
-        SERVER='ec2-user@3.90.154.11'
+        SERVER='ec2-user@35.173.184.133'
     }
     stages {
         stage('install dependencies') {
